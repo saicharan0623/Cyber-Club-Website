@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CyberOwls-Home</title>
+    <link rel="icon" type="image/png" href="../Images/logo3.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+
+        /*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+/*===== VARIABLES CSS =====*/
+:root {
+  --header-height: 3rem;
+  --font-semi: 600;
+  /*===== Colores =====*/
+  /*Purple 260 - Red 355 - Blue 224 - Pink 340*/
+  /* HSL color mode */
+  --hue-color: 224;
+  --first-color: hsl(var(--hue-color), 89%, 100%);
+  --second-color: hsl(var(--hue-color), 56%, 12%);
+  /*===== Fuente y tipografia =====*/
+  --body-font: 'Poppins', sans-serif;
+  --big-font-size: 2rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: .938rem;
+  --smaller-font-size: .75rem;
+  /*===== Margenes =====*/
+  --mb-2: 1rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+  --mb-6: 3rem;
+  /*===== z index =====*/
+  --z-back: -10;
+  --z-fixed: 100;
+}
+
+/* ===== FOOTER =====*/
+.footer {
+  background-color: var(--second-color);
+  color: #fff;
+  text-align: center;
+  font-weight: var(--font-semi);
+  padding: 2rem 0;
+}
+
+.footer__title {
+  font-size: 2rem;
+  margin-bottom: var(--mb-4);
+}
+
+.footer__social {
+  margin-bottom: var(--mb-4);
+}
+
+.footer__icon {
+  font-size: 1.5rem;
+  color: #fff;
+  margin: 0 var(--mb-2);
+}
+
+.footer__copy {
+  font-size: var(--smaller-font-size);
+}
+        /* Reset some default styles */
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+    font-size: 45px;
+    text-align: center;
+    background-color: #fff;
+    color: #133368;
+    margin-top: 0;
+    margin-bottom: 0; 
+        }
+        p{
+            margin-top: 40px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 40px;
+            margin-top: -20px;
+        }
+
+        /* Global styles */
+        body {
+            font-family: "Roboto", Arial, sans-serif;
+            background: url('../Images/back.jpg') center/cover no-repeat fixed;
+            color: #fff;
+            height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header styles */
+        header {
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 36px;
+        }
+
+        /* Mobile Menu Icon */
+        .logo {
+            font-size: 24px;
+            color: #fff;
+            text-decoration: none;
+            display: block;
+        }
+
+        #mobile-menu {
+            font-size: 24px;
+            color: #fff;
+            cursor: pointer;
+            display: none;
+        }
+
+        .icon {
+            width: 25px;
+            height: 25px;
+            position: relative;
+        }
+
+        .bar {
+            width: 100%;
+            height: 3px;
+            background-color: #fff;
+            position: absolute;
+            transition: 0.4s;
+        }
+
+        /* Media query for mobile responsiveness */
+        @media screen and (max-width: 768px) {
+            #mobile-menu {
+                display: block;
+            }
+
+            .menu {
+                display: flex;
+                flex-direction: column;
+                background: rgb(74, 114, 160);
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: fit-content;
+                text-align: center;
+                opacity: 0;
+                transform: translateX(-100%);
+                transition: opacity 0.3s, transform 0.3s;
+                z-index: 1;
+            }
+
+            .menu.active {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+            .menu li {
+                padding: 10px 0;
+            }
+
+            .menu a {
+                color: #fff;
+            }
+
+            .menu a:hover {
+                color: #00ffcc;
+            }
+
+            .bar:nth-child(2) {
+                top: 10px;
+            }
+
+            .bar:nth-child(3) {
+                top: 20px;
+            }
+        }
+
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .logo {
+            font-size: 50px;
+            color: #fff;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Add this CSS for the rotating and glowing logo with a moving border */
+        #logo {
+            text-align: center;
+            padding: 20px;
+            margin-top: -90px;
+        }
+
+        .rotate-logo {
+        position: relative;
+        width: 200px;
+        height: 180px;
+        background-image: url("../Images/logo3.png");
+        background-size: cover;
+        filter: drop-shadow(0 0 10px #ff00c8) drop-shadow(0 0 20px rgba(148, 2, 98, 0.7));
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        }
+       
+        
+        /* Media query for smaller screens (e.g., tablets) */
+        @media screen and (max-width: 1024px) {
+            body {
+                font-size: 14px;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 35px;
+                text-align: center;
+            }
+        }
+
+        /* Media query for even smaller screens (e.g., smartphones) */
+        @media screen and (max-width: 768px) {
+            body {
+                font-size: 12px;
+            }
+
+            .container {
+                padding: 5px;
+            }
+
+            nav .menu {
+                font-size: 14px;
+            }
+
+            h1 {
+                font-size: 20px;
+                text-align: center;
+            }
+
+            p {
+                font-size: 20px;
+            }
+
+            h2{
+                font-size: 50px;
+            }
+            a{
+                font-size: 20px;
+            }
+            h3{
+                font-size: 20px;
+                margin-top: 0;
+            }
+        }
+
+        .button-container {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .button-container .button {
+            display: inline-block;
+            margin: 0 10px 10px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #940262;
+            transition: background-color 0.3s;
+        }
+
+        .button-container .button:hover {
+            background-color: #133368;
+        }
+
+        /* Media query for smaller screens (e.g., smartphones) */
+        @media screen and (max-width: 768px) {
+            .button-container .button {
+                display: block;
+                margin: 0 auto 10px;
+                margin-left: 20px;
+                margin-right: 20px;
+                padding: 7px 10px;
+            }
+        }
+        
+        h3{
+            font-size: 20px;
+            margin-top: -20px;
+            margin-bottom: 20px;
+        }
+
+        .admin-login {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            background: #fff;
+            border-radius: 10%;
+        }
+
+        .admin-login a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+        }
+
+        .admin-login img {
+            width:40px;
+            height:40px;
+            align-items: center;
+        }
+
+.membership-message {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.membership-message p {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.membership-message a {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.membership-message a.whatsapp-icon {
+    color: #2cfa78; /* WhatsApp color */
+}
+
+.membership-message a.instagram-icon {
+    color: #E4405F; /* Instagram color */
+}
+
+.membership-message a.linkedin-icon {
+    color: #0077B5; /* LinkedIn color */
+}
+
+.membership-message a:hover {
+    color: #fff;
+}
+
+
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <header>
+        <div class="container">
+            <h2>Welcome to Cyber Owls Club</h2>
+            <h3>STME, NMIMS Hyderabad<h3>
+            <p>Empowering the future of cybersecurity.</p>
+        </div>
+    </header>
+    <section id="logo">
+        <div class="container">
+            <div class="rotate-logo"></div>
+        </div>
+    </section>
+    <section class="button-container">
+        <a href="../php/about.php" class="button">About Club</a>
+        <a href="../php/boardmembers.php" class="button">Board Members</a>
+        <a href="../php/events.php" class="button">Events</a>
+        <a href="../php/prevention.php" class="button">Awareness</a>
+        <a href="../php/contact.php" class="button">Contact</a>
+    </section>
+
+    <div class="admin-login">
+        <a href="../php/admin.php">
+            <img src="../Images/profile.png" alt="Admin Icon">
+        </a>
+    </div>
+
+    
+
+    <div class="membership-message">
+        <p>Do you want to become a member? Join us on:</p>
+        <a href="https://chat.whatsapp.com/ELvmVYl0bjc2ZAoz0JXto6" target="_blank" class="whatsapp-icon">
+            <span class="fab fa-whatsapp"></span> WhatsApp
+        </a>
+        
+        <a href="https://www.instagram.com/cyberowls.stme?igsh=MXdtanAza3M3MHdybA==" target="_blank" class="instagram-icon">
+            <i class="fab fa-instagram"></i> Instagram
+        </a>
+        
+        <a href="https://www.linkedin.com/in/cyberowls/" target="_blank" class="linkedin-icon">
+            <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+    </div>
+    
+    <!--===== FOOTER =====-->
+    <footer class="footer">
+        <p class="footer__title">CYBER OWLS STME HYD</p>
+        <div class="footer__social">
+            <a href="https://www.linkedin.com/in/cyberowls/" class="footer__icon"><i class='bx bxl-linkedin' ></i></a>
+            <a href="https://www.instagram.com/cyberowls.stme?igsh=MXdtanAza3M3MHdybA==" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
+        </div>
+        <p class="footer__copy">Contact: <a href="mailto:cyberowls.stmehyd@nmims.edu.in" style="color: #940262;">cyberowls.stmehyd@nmims.in</a></p>
+        <p class="footer__copy">&#169; CyberOwls. All rigths reserved</p>
+    </footer>
+
+    <script src="../script/particles.js"></script>
+    <script src="../script/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            particles: {
+                number: {
+                    value: 100,
+                },
+                color: {
+                    value: "#82eefd",
+                },
+                shape: {
+                    type: "circle",
+                },
+                opacity: {
+                    value: 0.6,
+                },
+                size: {
+                    value: 4,
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#82eefd",
+                    opacity: 0.4,
+                    width: 1,
+                },
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: "repulse",
+                    },
+                    resize: true,
+                },
+            },
+        });
+    </script>
+    </body>
+</html>
