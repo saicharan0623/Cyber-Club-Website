@@ -1,41 +1,25 @@
----------Database Connection Setup Instructions----------
+# 🛡️ Cyber Security Club Website
 
-contact.php:
-Locate line 14.
-Update the database connection parameters:
+Welcome to the Cyber Security Club website! This repository contains the source code for our club's website, where members can explore information about the club, its board members, events, awareness campaigns, and contact details. Additionally, there's an admin login feature for managing events and updating information seamlessly.
 
-$hostname = "your_host";
-$username = "your_username";
-$password = "your_password";
-$database = "your_database";
+## 🚀 Features
 
-view-uploaded-files.php:
-Open the view-uploaded-files.php file.
-Update the database connection parameters on lines 3-6:
+- **About Us:** Learn more about the Cyber Security Club, our mission, vision, and values.
+- **👥 Board Members:** Meet our dedicated board members who lead and manage the club's activities.
+- **📅 Events:** Stay updated with our upcoming events, workshops, seminars, and competitions.
+- **🔍 Awareness:** Access resources, articles, and guides to raise awareness about cybersecurity.
+- **📧 Contact:** Reach out to us for inquiries, collaborations, or feedback.
+- **🔒 Admin Login:** Exclusive access for administrators to manage events, update information, and interact with members.
 
-$hostname = "your_host";
-$username = "your_username";
-$password = "your_password";
-$database = "your_database";
+## 🛠️ Technologies Used
 
-statusHistory.php:
-Open the statusHistory.php file.
-Update the database connection parameters on lines 39-42:
+- **Frontend:** HTML, CSS, JavaScript, Bootstrap
+- **Backend:** Node.js, Express.js
+- **Database:** MySql
+- **Other Tools:** Git, GitHub, VS Code, Heroku (for deployment)
 
-$hostname = "your_host";
-$username = "your_username";
-$password = "your_password";
-$database = "your_database";
+## 🛠️ Setup Instructions
 
-download.php:
-Open the download.php file.
-Update the database connection parameters on lines 3-6:
-
-$hostname = "your_host";
-$username = "your_username";
-$password = "your_password";
-$database = "your_database";
-
-Replace 'your_host', 'your_username', 'your_password', and 'your_database' with your specific database connection details.
-
-Thank You for any deatails contact : 6304856382 or mail: saicharan.m033@nmims.edu.in
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/your-username/cyber-security-club-website.git
