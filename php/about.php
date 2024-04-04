@@ -6,12 +6,10 @@
         <link rel="icon" type="image/png" href="../Images/logo3.ico">
         <link rel="stylesheet" href="assets/css/styles.css">
 
-        <!-- =====BOX ICONS===== -->
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
         <title>About club</title>
         <style>
-/*===== GOOGLE FONTS =====*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 /*===== VARIABLES CSS =====*/
 :root {
@@ -23,18 +21,15 @@
   --hue-color: 224;
   --first-color: hsl(var(--hue-color), 89%, 100%);
   --second-color: hsl(var(--hue-color), 56%, 12%);
-  /*===== Fuente y tipografia =====*/
   --body-font: 'Poppins', sans-serif;
   --big-font-size: 2rem;
   --h2-font-size: 1.25rem;
   --normal-font-size: .938rem;
   --smaller-font-size: .75rem;
-  /*===== Margenes =====*/
   --mb-2: 1rem;
   --mb-4: 2rem;
   --mb-5: 2.5rem;
   --mb-6: 3rem;
-  /*===== z index =====*/
   --z-back: -10;
   --z-fixed: 100;
 }
@@ -48,7 +43,6 @@
   }
 }
 
-/*===== BASE =====*/
 *, ::before, ::after {
   box-sizing: border-box;
 }
@@ -87,7 +81,6 @@ img {
   display: block;
 }
 
-/*===== CLASS CSS ===== */
 .section-title {
   position: relative;
   font-size: var(--h2-font-size);
