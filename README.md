@@ -1,6 +1,7 @@
 # 🛡️ Cyber Security Club Website
 
-<img src="https://hyderabad.nmims.edu/stme/cyberowls/Images/logo.jpg" alt="Techfest Logo" width="200" height="200">
+![Reference](reference-co.png)
+
 
 ## 🔐 Welcome, Security Enthusiasts!
 
